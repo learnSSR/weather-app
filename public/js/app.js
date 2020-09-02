@@ -13,7 +13,7 @@ weatherform.addEventListener('submit' , (e) => {
 		console.log(data)
 
 		const disp = document.querySelector('#disp')
-        disp.textContent  = 'Today temp at '+ data.location + ' is ' + data.temp + '℃ add chance of rain is '+data.precip+'%.'
+        disp.textContent  = 'Today temp at '+ data.location + ' is ' + data.temp + '℃ and chance of rain is '+data.precip+'%.'
 
 	} )
     
