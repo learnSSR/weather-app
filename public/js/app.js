@@ -9,11 +9,12 @@ weatherform.addEventListener('submit' , (e) => {
 	console.log(search.value)
 	disp.textContent = 'loading...'
 	fetch('/weather?search='+search.value).then( (response) => {
-	response.json().then( (data) => {
+	 
+		response.json().then( (data) => {
 		console.log(data)
 
 		const disp = document.querySelector('#disp')
-        disp.textContent  = 'Today temp at '+ data.location + ' is ' + data.temp + '℃ and chance of rain is '+data.precip+'%.'
+        disp.textContent  = 'Today weather forecast for '+  data.location+' is "'+data.description +'" and temp is ' + data.temp + '℃ and chances of rain is '+data.precip+'%.'
 
 	} )
     
